@@ -13,7 +13,7 @@ inquirer
     .then((answers) => {
         const url = answers.URL;
         var qr_svg = qr.image(url);
-        qr_svg.pipe(fs.createWriteStream('qr_iamge.png'));
+        qr_svg.pipe(fs.createWriteStream('qr_image.png'));
         fs.writeFile("URL.txt", url, (err) => {
             if (err) throw err;
             console.log("The url has been saved to text file.")
@@ -25,5 +25,5 @@ inquirer
         } else {
         // Something else went wrong
         }
-  });
+    });
 
